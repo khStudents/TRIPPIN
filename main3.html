@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///F:/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/mainpage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Insert title here</title>
+    
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        div {
+            
+            border : 1px solid black;
+        }
+
+        
+        #body {
+            position:absolute;
+            width:100%;
+            height:100%;
+            left:0;
+            top:0;            
+            box-sizing: border-box;
+        }
+        #menubar_navi>li{
+            border: 1px solid black;
+           
+        }
+
+        #main_top{
+            width: 100%;
+            height: 10%;
+            
+        }
+        #logo{
+            width: 30%;
+            height: 100%;
+            float: left;
+            margin: 0;
+        }
+        #serch_place{
+            width: 15%;
+            height: 100%;
+            margin: 0;
+            float: left;
+            padding-top:35px;
+        }
+        #serch_place>input{
+            
+        }
+        #mypage{
+            width: 20%;
+            height: 100%;
+            float: right;
+            padding-top: 45px;
+            
+        }
+        #mypage>a{
+
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            border: none;
+        }
+        #main_bottom{
+            width: 100%;
+            height: 90%;
+            
+        }
+        #menubar{
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+    
+
+        #menubar_navi>li{
+            
+            width: 100%;
+            height: 60px;
+            list-style-type: none;
+            line-height: 60px;
+            text-align: center;
+        }
+    
+        #menubar_navi>li>a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration-line: none;
+            font-size: 10px;
+            text-align: center;
+            border: none;
+        }
+         #menubar_navi>li>a:hover{
+            color: red;
+        }
+        
+        #list1{
+            width: 80%;
+            height: 100%;
+            float: left;
+        }
+        #list2{
+            width: 20%;
+            height: 100%;
+            float: left;
+            /*display: none;*/
+        }
+        
+        .content_map{
+            border :0px;
+        }
+        
+     
+        .open_btn{
+            border :0px;
+            float: left;
+            width: 3%;
+        }
+        .close_btn {
+            border :0px;
+            float: left;
+        }
+        .main_map{
+            position: relative;
+            top:-22px;
+            
+            width: 80%;
+            height: 100%;
+            float: left;
+            z-index: -30;
+            background-color:  green;
+        }
+        .close_map{
+            position: relative;
+            top:-22px;
+            
+            float: left;
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+            z-index: -30;
+            
+        }
+    
+    #main_bottom1{
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+    #main_bottom2{
+        float:left;
+        width: 80%;
+        height: 100%;
+    }
+     
+    </style></head>
+    
+   
+    
+    
+    
+    
+    
+        
+
+<body>
+    
+    
+   <script>
+       
+    window.onload = function(){
+        var width = screen.availWidth-20;
+        var height = screen.availHeight;
+        var body = document.getElementById("body");
+         body.style.width = width+"px";
+        body.style.height = height+"px";
+        console.log(width+","+height);
+        
+        $("#open_btn").hide();
+        
+  
+    };
+
+</script>
+   
+   
+    
+   <div id="body">
+       <div id="main_top">
+           <div id="logo">로고</div>
+           
+           <div id="mypage"><a href="file:///F:/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/mainpage.html#">마이페이지</a></div>
+       </div>
+       
+       <div id="main_bottom">
+           <div id="main_bottom1">
+        <div id="menubar">
+            <ul id="menubar_navi">
+                <li id="hotel"><a href="file:///F:/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0">서울</a></li>
+                <li id="food"><a href="file:///F:/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0">경기도</a></li>
+                <li id="tourist"><a href="file:///F:/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0">인천</a></li>
+            </ul>
+        </div>
+        <div id="list1"></div>
+               </div>
+               
+               
+               
+               <div id="main_bottom2">
+        <div id="list2" style=""></div>
+           <div class="content_map open_btn">
+            <button id="close_btn" style="">CLOSE</button>
+            <button id="open_btn" style="display: none;">OPEN</button>
+        </div>
+        <div id="main_map" class="main_map"></div>
+                   
+                   
+                   </div>
+    </div>
+    </div>
+          <script>
+            
+            var content_map = document.getElementById("main_map");
+
+            $("#close_btn").click(function () {
+                $("#list2").hide();
+                $(".content_map").removeClass("open_btn");
+                $(".content_map").addClass("close_btn");
+                $("#main_map").removeClass("main_map");
+                $("#main_map").addClass("close_map");
+          
+                
+                $("#close_btn").hide();
+                $("#open_btn").show();
+            });
+        $("#open_btn").click(function () {
+            $(".content_map").removeClass("close_btn");
+            $("#list2").show();
+            $(".content_map").addClass("open_btn");
+                $("#close_btn").show();
+                $("#open_btn").hide();
+            $("#main_map").removeClass("close_map");
+                $("#main_map").addClass("main_map");
+            });
+
+
+
+    </script>
+
+
+</body></html>
