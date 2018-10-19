@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Trippin_hyun">
+    <wb-module deploy-name="trippin_hyun">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Trippin_hyun"/>
-        <property name="java-output-path" value="/Trippin_hyun/build/classes"/>
+        <property name="context-root" value="trippin_hyun"/>
+        <property name="java-output-path" value="/trippin_hyun/build/classes"/>
     </wb-module>
 </project-modules>
