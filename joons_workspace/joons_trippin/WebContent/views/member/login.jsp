@@ -12,11 +12,6 @@
 
 <body>
 
-
-
-
-
-
 <style>
 .modal_wrap{width:365px;border-top:solid #1a7ad9 2px;font-family:nanum;}
 .modal_title{font-size:19px;height:60px;border-bottom:solid #cccccc 1px;color:#363636;font-weight:bold;padding:22px 0px 0px 20px;}
@@ -39,7 +34,7 @@
 			트리핀 로그인		</div>
 		<div class="et_modal_close"></div>
 		<div class="modal_content">
-			<form action="/ko/member" method="post" id="login_form" name="login_form">
+			<form action="/login.do" method="post" id="login_form" name="login_form">
 				<div><input type="text" name="email"  id="email" class="input_txt" placeholder="이메일 주소"></div>
 				<div><input type="password" name="userPwd" id="userPwd" class="input_txt" placeholder="비밀번호"></div>
 				<div class="et_login" onclick="login_submit();">
@@ -55,8 +50,6 @@
 
 		</div>		
 	</div>
-
-
 
 </div>
 <script type='text/javascript'>

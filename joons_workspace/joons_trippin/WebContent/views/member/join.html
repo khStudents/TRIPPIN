@@ -9,15 +9,14 @@
 	$(document).ready(function(){
 	});
 </script>
-<title>여행의 시작! - earthtory(어스토리)</title>
+<title>경쾌한 발걸음! - trippin(트리핀)</title>
 </head>
 <body>
 <style>
 .modal_wrap{width:365px;border-top:solid #1a7ad9 2px;font-family:nanum;}
 .modal_title{font-size:19px;height:60px;border-bottom:solid #cccccc 1px;color:#363636;font-weight:bold;padding:22px 0px 0px 20px;}
 .modal_content{padding:20px;}
-.fb_login{width:325px;height:40px;line-height:40px;background:#3b5998;color:#fff;margin-bottom:20px;text-align:center;font-size:15px;cursor:pointer;}
-.gg_login{width:325px;height:40px;line-height:40px;background:#dd4b39;color:#fff;text-align:center;font-size:15px;cursor:pointer;}
+
 .modal_line{width:365px;height:1px;background:#ccc;}
 
 .et_login{width:325px;height:40px;line-height:40px;background:#1a7ad9;color:#fff;text-align:center;font-size:15px;cursor:pointer;}
@@ -42,11 +41,6 @@
 			<!--어스토리 회원가입-->어스토리 회원가입		</div>
 		<div class="et_modal_close" onclick="et_modal_close()"></div>
 				<div class="modal_content">
-			<div class="fb_login" onclick="fb_login()">
-				<!--Facebook 로그인-->Facebook으로 회원가입			</div>
-			<div class="gg_login" onclick="gg_login()">
-				<!--Google 로그인-->Google로 회원가입			</div>
-
 		</div>
 				<div class="modal_line"></div>
 		<div class="modal_content">
@@ -55,8 +49,7 @@
 									</div>	
 
 			<form action="/ko/member/join" method="post" id="join_form" name="join_form">
-				<!--//<input type="hidden" value="http%3A%2F%2Fwww.earthtory.com%2Fko%2F" name="referrer" />-->
-					<input type="text" name="user_name" id="user_name" class="input_txt" placeholder="이름" value="" />
+				<input type="text" name="user_name" id="user_name" class="input_txt" placeholder="이름" value="" />
 				<input type="text" name="email_address" id="email_address" class="input_txt" placeholder="이메일 주소" value=""  onKeyUp="vali_mail();" />
 				<input type="password" name="password" id="password" class="input_txt" placeholder="비밀번호 (6자 ~ 20자)" value="" onKeyUp="vali_pw();" />
 				<input type="hidden" name="password_confirm" class="default_input" value ="" />
@@ -86,23 +79,12 @@
 
 
 </div>
-<div id="loading_wrap">
-	<img src="/res/img/common/w_ic_loading2.gif">
-</div>	
+
 
 
 <script>
 
-		$('.radio').click(function(){
-			var _this = $(this).attr('data-val');
-			$('#r_gender').val(_this);
-		});
-
-$('#content_wrap').show();
-parent.$('#modal_view').css('background','#fff');
-
-
-		
+	
 
 	function vali_mail(){
 		var bol = true;
@@ -133,15 +115,6 @@ parent.$('#modal_view').css('background','#fff');
 	parent.$('.et_modal_window').css('margin-top','-'+margin+'px');
 
 
-function gg_login(){
-
-	window.open('/gauth','earthtory_login','width=400, height=450, toolbar=no, menubar=no, scrollbars=no, resizable=yes');
-}
-
-function fb_login(){
-
-window.open('/fblogin?fb=1&ref=http%3A%2F%2Fwww.earthtory.com%2Fko%2F','earthtory_login','width=400, height=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes');
-}
 
 function join_submit(){
 			if($('#confirm_term').attr('data') == '0'){
