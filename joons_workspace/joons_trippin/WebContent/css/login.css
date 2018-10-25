@@ -1,0 +1,15 @@
+@charset "EUC-KR";
+
+.modal_wrap{width:365px;border-top:solid #1a7ad9 2px;font-family:nanum;}
+.modal_title{font-size:19px;height:60px;border-bottom:solid #cccccc 1px;color:#363636;font-weight:bold;padding:22px 0px 0px 20px;}
+.modal_content{padding:20px;}
+.modal_line{width:365px;height:1px;background:#ccc;}
+
+.et_login{width:325px;height:40px;line-height:40px;background:#1a7ad9;color:#fff;text-align:center;font-size:15px;cursor:pointer;}
+.input_txt{width:312px;height:31px;border:solid #c8c8ca 1px;margin-bottom:10px;font-family:'nanum';padding-left:10px;}
+
+.et_login_sub_box{padding-top:10px;font-size:13px;color:#808080;}
+.et_login_sub_box a{color:#808080;}
+.et_modal_close{top:22px;right:10px;width:23px;height:23px;cursor:pointer;}
+
+#loading_wrap{display:none;text-align:center;padding-top:100px;}
