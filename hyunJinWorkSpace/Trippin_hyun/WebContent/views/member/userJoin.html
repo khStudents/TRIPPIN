@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    
+    
+<body>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #wrapper{
+            width: 500px;
+            height: 400px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 300px;
+            padding-left: 30px;
+/*            text-align: center;*/
+            background-color: antiquewhite;
+        }
+        body {
+            background-color: rgba(0,0,0,0.2);
+            
+        }
+        
+    
+    </style>
+`      
+    <div id="wrapper">
+        <div id="header">
+            <h2>TRAPPIN 회원가입</h2>
+        </div>
+        <div id="content">
+            <form action="join.html" method="get">
+
+                <p>이름
+                </p>
+                <input type="text" name="userName" placeholder="이름을 입력하세요" size="20"/><br/>
+
+                <p>이메일 주소
+                </p>
+                <input type="text" name="userId" placeholder="Email을 입력하세요" size="20"/><br/>
+
+                <p>비밀번호
+                </p><input type="password" name="userPwd" placeholder="패스워드을 입력하세요" size="20"/><br/>
+                
+                <fieldset>
+                    <legend>성별</legend>
+                    <input type="radio" name="userGender" value="M"/>남성<br>
+                    <input type="radio" name="userGender" value="F"/>여성<br>
+                </fieldset>
+                
+
+                <p>휴대폰 번호</p>
+                <input type="text" name="userPhone"size="20"/><br/>
+           
+                <input type="submit" value="회원가입" />
+                <input type="reset" value="취소"   />
+            </form>
+        </div>
+    
+
+            
+
+    </div>
+
+
+    
+    
+</body>
+</html>
