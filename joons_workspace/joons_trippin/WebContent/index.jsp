@@ -9,7 +9,8 @@
 <body>
 
 <%
-	session = request
+	session = request.getSession(false);
+	
 %>
 <!--로그인  -->
 <form action="/login.do" method="post">

@@ -28,7 +28,10 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("utf-8");
-		request.
+		String userId = request.getParameter("userId");
+		String userPwd = request.getParameter("userPwd");
+		
+		
 		
 		
 		
