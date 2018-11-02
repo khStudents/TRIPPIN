@@ -24,8 +24,7 @@
 			<form action="/login.do" method="post" id="login_form" name="login_form">
 				<div><input type="text" name="email"  id="email" class="input_txt" placeholder="이메일 주소"></div>
 				<div><input type="password" name="userPwd" id="userPwd" class="input_txt" placeholder="비밀번호"></div>
-				<div class="et_login" onclick="login_submit();">
-					로그인				</div>
+				<div><input type="submit" value="로그인" class="et_login" /></div>
 			</form>
 			<div class="et_login_sub_box"><span><a href="/ko/member/find_pw">비밀번호 찾기</a> | <a href="/ko/member/join" style="color:#1a7ad9">회원가입</a></span></div>
 		</div>

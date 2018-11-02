@@ -1,31 +1,36 @@
 package com.trippin.member.model.vo;
 
+import java.sql.Date;
+
 public class Member {
-	private String userId;
+	private String email;
 	private String userPwd;
 	private String userName;
 	private String birthDate;
 	private String phone;
-	private String email;
-	public String getUserId() {
-		return userId;
+	private char active;
+	private Date enrollDate;
+	
+	
+
+	public Member() {
+		// TODO Auto-generated constructor stub
 	}
 	
-	
-	public Member(String userId, String userPwd, String userName, String birthDate, String phone, String email) {
+
+	public Member(String email, String userPwd, String userName, String birthDate, String phone, char active,
+			Date enrollDate) {
 		super();
-		this.userId = userId;
+		this.email = email;
 		this.userPwd = userPwd;
 		this.userName = userName;
 		this.birthDate = birthDate;
 		this.phone = phone;
-		this.email = email;
+		this.active = active;
+		this.enrollDate = enrollDate;
 	}
 
 
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
 	public String getUserPwd() {
 		return userPwd;
 	}
@@ -56,6 +61,20 @@ public class Member {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+	public char getActive() {
+		return active;
+	}
+
+	public void setActive(char active) {
+		this.active = active;
+	}
+
+	public Date getEnrollDate() {
+		return enrollDate;
+	}
+
+	public void setEnrollDate(Date enrollDate) {
+		this.enrollDate = enrollDate;
+	}
 	
 }
